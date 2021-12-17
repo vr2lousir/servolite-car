@@ -16,8 +16,8 @@ radio.onReceivedValue(function (name, value) {
         rawRoll,
         -90,
         90,
-        0,
-        180
+        45,
+        135
         )
         rollLeft = mappedRoll
         rollRight = mappedRoll
@@ -70,9 +70,6 @@ let rawRoll = 0
 let pixel: neopixel.Strip = null
 radio.setGroup(1)
 pixel = neopixel.create(DigitalPin.P0, 5, NeoPixelMode.RGB)
-basic.forever(function () {
-	
-})
 basic.forever(function () {
     pixel.rotate(1)
     pixel.show()
